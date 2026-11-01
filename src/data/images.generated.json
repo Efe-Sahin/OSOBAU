@@ -1,0 +1,101 @@
+{
+  "aok-gebaeude-magdeburg": {
+    "width": 2048,
+    "height": 1365,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2048
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoYABAAPu1orU6ppiSiMAgBMB2JZQC2yBBnSj79HesZ6WAA9OjXFGEyKjmGAofxplERwlxhtwTAss0AugytZhArJ9FyQ9oenv3jF79pAAA="
+  },
+  "q3-verspachtelung-01": {
+    "width": 1500,
+    "height": 1000,
+    "widths": [
+      480,
+      800,
+      1200,
+      1500
+    ],
+    "placeholder": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoYABAAPu1Ct1apoqakGAEwHYllAABTRDHIufOrs3gA+KGlSinOXNXT7TD8dZUEVSFRuxbCvoqjy5dLC4Wy0HAA"
+  },
+  "q3-verspachtelung-02": {
+    "width": 1366,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1200,
+      1366
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBQCdASoYACQAPtlcoE2oJaMiNVv8AQAbCWUAwGQdxfR6maKWohpIbglUVOr5JCHy0QgAAN+8CSuZuQbzHaYTTjQG9Y+mVafY7Avi9d0TrhCJqj2+WqX1JZaYpGj9CTAkRU/esBKBe0/g6hq9IRp+VMTqRNEEfu1TSxwwO2sqf+rdwk0WoIDiG4tjdEAA"
+  },
+  "saarterrassen-plaza-nord-01": {
+    "width": 1074,
+    "height": 1071,
+    "widths": [
+      480,
+      800,
+      1074
+    ],
+    "placeholder": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBQCdASoYABgAPu1kp06ppaMiMBgMATAdiUAVw4Hpd+PU42gSSbZi4BmsOVHG5S4QumOwAAD+5DbQ2xjecYpygSeV8RWwRYJ8yy+GHS5lZ0FD7s8zqDlLOdF0W+6S7so42O116FtT8bzh6Imjew80mw+lmgGZ0QiAWy+ZLt9PhXZHuAA="
+  },
+  "saarterrassen-plaza-nord-02": {
+    "width": 960,
+    "height": 945,
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAwBQCdASoYABgAPu1qqVAppiOiqA1RMB2JQBajZfg0egbCPEqQtPiLNXZmzYKjQ1rLoAD4+k3NJB+ac6VnD1RaKHeozoAROhpvRfoRkqiS1H+ZksAm57JDkaSPpQJ36V02V8v/R0vf8BmyuPY7t8uxqwfzJ2H72nGMoWAAAAA="
+  },
+  "saarterrassen-plaza-nord-03": {
+    "width": 1536,
+    "height": 1354,
+    "widths": [
+      480,
+      800,
+      1200,
+      1536
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQBACdASoYABUAPu1srFEppaQiqAqpMB2JYwC4MAtVWyBuz+ew1ZxrANaqdjBqAAD8SNItaalXC5KFBwcrJTfjDmHrWEYVHCF9hy5FWV5tjZ23b6LI6zrcgr4TFGiQ1AA="
+  },
+  "saarterrassen-plaza-nord-04": {
+    "width": 1422,
+    "height": 1536,
+    "widths": [
+      480,
+      800,
+      1200,
+      1422
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBQCdASoYABoAPtVao02oJaMiN+gBABqJZACdMwz1wFFKeytbUBQ0ID2TjVP2iT3TAADMkAVinlimvyixo/CcA9KhgQ19NW/4aIEk2ytiCjxggLYnvWa7p6KOYcLzxfCqwiKQyJAgKtgtCelmRQMYd39IffdgAAA="
+  },
+  "tabbertstrasse-berlin-visualisierung": {
+    "width": 1500,
+    "height": 1125,
+    "widths": [
+      480,
+      800,
+      1200,
+      1500
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoYABIAPuFeqk2opTqiMAwDUBwJZwDOOCEt6hw6XY63p/5dQkehQAD93g0nBMfVCbh4wjQJxC2WP8rjKG3FMRatwMdmnOgR/DkvEfPf1RzUeyG51iwAAA=="
+  },
+  "aok-gebaeude-magdeburg-luftbild": {
+    "width": 2048,
+    "height": 1365,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2048
+    ],
+    "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoYABAAPu1orU6ppiSiMAgBMB2JZQC2yBBnSj79HesZ6WAA9OjXFGEyKjmGAofxplERwlxhtwTAss0AugytZhArJ9FyQ9oenv3jF79pAAA="
+  }
+}

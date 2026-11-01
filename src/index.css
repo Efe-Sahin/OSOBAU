@@ -1,0 +1,181 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------
+   OSOBAU Design-Tokens
+   Kalksteinweiß, Graphit, Bronze – abgeleitet aus Logo (schwarz/weiß)
+   und Master-Prompt. Bronze dient als ruhiger Akzent, nie als Fläche.
+   ------------------------------------------------------------ */
+@theme {
+  --color-paper: #f7f7f5;
+  --color-paper-2: #efeeea;
+  --color-ink: #17191b;
+  --color-night: #171c20;
+  --color-night-2: #1f252a;
+  --color-stone: #72777a;
+  --color-stone-light: #a3a8ab;
+  --color-line: #dcdbd6;
+  --color-line-dark: #2e353b;
+  --color-bronze: #b49b73;
+  /* Textvariante der Akzentfarbe auf hellem Grund (WCAG AA ≥ 4.5:1) */
+  --color-bronze-ink: #7d6644;
+
+  --font-display: 'Montserrat Variable', 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Mono für Projektdaten – angelehnt an den Plankopf technischer Zeichnungen */
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --breakpoint-3xl: 1720px;
+}
+
+/* ------------------------------------------------------------
+   Farbwelt: Standard = Graphit/Bronze. Alternative „blau“ = Navy/Weiß.
+   Umschalten in src/config/site.ts → palette.
+   ------------------------------------------------------------ */
+:root {
+  /* Overlay-Farbe für Bildverläufe (RGB-Kanäle) */
+  --overlay: 23 28 32;
+}
+:root[data-palette='blau'] {
+  --color-paper: #f6f9fc;
+  --color-paper-2: #eaf1f8;
+  --color-ink: #0e1b2b;
+  --color-night: #0b2545;
+  --color-night-2: #13315c;
+  --color-stone: #566476;
+  --color-stone-light: #9aa8b8;
+  --color-line: #d5dfeb;
+  --color-line-dark: #234773;
+  /* Akzent: helles Blau auf dunklem Grund, kräftiges Blau als Textfarbe auf hellem Grund */
+  --color-bronze: #6cb4ee;
+  --color-bronze-ink: #1c5ea8;
+  --overlay: 11 37 69;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+  /* Weiches Scrollen auch für einfache Sprungmarken (z. B. „Zum Inhalt springen“) */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    text-wrap: balance;
+    /* Lange deutsche Komposita (z. B. „Datenschutzerklärung“) dürfen auf schmalen Bildschirmen trennen */
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-bronze);
+    color: var(--color-night);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-bronze-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: var(--color-bronze);
+  }
+  img {
+    @apply max-w-full;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1480px] px-5 sm:px-8 lg:px-12 xl:px-16;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-3 font-sans text-[0.78rem] font-semibold tracking-[0.16em] uppercase;
+  }
+  /* Einheitlicher Abschnitt: gleiche Innenabstände oben/unten auf der ganzen Website */
+  .section {
+    @apply py-24 lg:py-32;
+  }
+  /* Einheitliche Abschnittsüberschrift (alle h2 der Startseite + Kontaktbanner) */
+  .section-title {
+    @apply font-display font-semibold tracking-[-0.03em];
+    font-size: clamp(2.1rem, 4.9vw, 4.4rem);
+    line-height: 1;
+  }
+  .display-xl {
+    @apply font-display font-semibold tracking-[-0.025em];
+    font-size: clamp(2.5rem, 6.6vw, 6.25rem);
+    line-height: 1;
+  }
+  .display-lg {
+    @apply font-display font-semibold tracking-[-0.022em];
+    font-size: clamp(2.1rem, 4.4vw, 4rem);
+    line-height: 1.04;
+  }
+  .display-md {
+    @apply font-display font-semibold tracking-[-0.02em];
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+    line-height: 1.12;
+  }
+  .lead {
+    @apply text-[1.075rem] leading-[1.7] text-stone sm:text-lg;
+  }
+  .link-underline {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+    transition: background-size 0.45s var(--ease-out-soft);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+  /* Sichtbare Markierung fehlender Unternehmensangaben */
+  .placeholder-tag {
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-dashed px-1.5 py-0.5 font-sans text-[0.8em] font-medium;
+    border-color: #c2410c;
+    color: #9a3412;
+    background: #fff7ed;
+  }
+  .on-dark .placeholder-tag {
+    border-color: #fb923c;
+    color: #fed7aa;
+    background: rgba(194, 65, 12, 0.18);
+  }
+}
+
+@layer utilities {
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

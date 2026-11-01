@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+.DS_Store
+
+# Server-Konfiguration mit Zugangsdaten (nur Vorlage config.example.php einchecken)
+public/api/config.php
