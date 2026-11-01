@@ -88,24 +88,9 @@ export default function HomePage() {
           </motion.h1>
 
           <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-12 lg:items-end">
-            {/* Buttons links – Hauptaktion zuerst */}
-            <motion.div
-              className="order-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:order-1 lg:col-span-6"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.45 }}
-            >
-              <Button to={lp('/#kontakt', lang)} variant="light" className="sm:px-8 sm:py-4">
-                {t.nav.request}
-              </Button>
-              <Button to={lp('/#leistungen', lang)} variant="outline-light" icon={false} className="sm:px-8 sm:py-4">
-                {h.heroServices}
-              </Button>
-            </motion.div>
-
             {/* Text rechts */}
             <motion.div
-              className="order-1 max-w-lg lg:order-2 lg:col-span-5 lg:col-start-8 lg:justify-self-end"
+              className="max-w-lg lg:col-span-5 lg:col-start-8 lg:justify-self-end"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
