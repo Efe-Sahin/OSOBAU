@@ -24,15 +24,10 @@ const de = {
     request: 'Projekt anfragen',
     language: 'Sprache',
   },
-  whatsapp: {
-    label: 'Per WhatsApp schreiben',
-    short: 'WhatsApp',
-    newTab: '(öffnet in neuem Fenster)',
-  },
   home: {
     seoTitle: 'OSOBAU | Trockenbau & Kernsanierung in Berlin',
     seoDescription:
-      'OSOBAU aus Berlin: Trockenbau, Kernsanierung, Brandschutz und Q3-Verspachtelung für Gewerbe und öffentliche Auftraggeber in Berlin & Brandenburg.',
+      'OSOBAU aus Berlin: Trockenbau, Kernsanierung und Brandschutzarbeiten für Gewerbe und öffentliche Auftraggeber in Berlin & Brandenburg.',
     heroAlt: 'Luftaufnahme des AOK-Gebäudes in Magdeburg mit Innenhof – Referenz von OSOBAU',
     hero1: 'Räume gestalten.',
     hero2: 'Werte schaffen.',
@@ -46,12 +41,12 @@ const de = {
     servicesTitle: 'Unsere Leistungen',
     servicesAccent: 'im Überblick.',
     servicesIntro:
-      'Von der Raumaufteilung bis zur fertigen Oberfläche. Vier Leistungsbereiche, ausgeführt mit dem Anspruch an saubere, fachgerechte Arbeit.',
+      'Von der Raumaufteilung bis zur fertigen Oberfläche. Drei Leistungsbereiche, ausgeführt mit dem Anspruch an saubere, fachgerechte Arbeit.',
     aboutTitle: 'Über uns',
     aboutAccent: 'Qualität zeigt sich im Detail.',
     aboutHeading: 'Trockenbau und Innenausbau aus Berlin.',
     aboutP1:
-      'OSOBAU ist ein Berliner Unternehmen für Trockenbau, Kernsanierung, Brandschutzarbeiten im Innenausbau und Q3-Verspachtelung. Wir arbeiten für gewerbliche und öffentliche Auftraggeber, Investoren sowie Bau- und Generalunternehmen.',
+      'OSOBAU ist ein Berliner Unternehmen für Trockenbau, Kernsanierung und Brandschutzarbeiten im Innenausbau. Wir arbeiten für gewerbliche und öffentliche Auftraggeber, Investoren sowie Bau- und Generalunternehmen.',
     aboutP2:
       'Unser Sitz ist in Berlin-Mitte, unser Schwerpunkt liegt in Berlin und Brandenburg. Darüber hinaus haben wir Projekte in anderen Regionen ausgeführt, etwa Trockenbau- und Brandschutzarbeiten bei den Saarterrassen Plaza Nord in Saarbrücken und Trockenbauarbeiten im AOK-Gebäude in Magdeburg.',
     valuesTitle: 'Wofür wir stehen',
@@ -62,11 +57,11 @@ const de = {
       },
       {
         title: 'Qualität',
-        text: 'Saubere Anschlüsse, gerade Flächen und eine präzise Verarbeitung bis zur Oberfläche in Qualitätsstufe Q3.',
+        text: 'Saubere Anschlüsse, gerade Flächen und eine präzise Verarbeitung bis zur fertigen Oberfläche.',
       },
       {
         title: 'Spezialisierung',
-        text: 'Statt alles anzubieten, konzentrieren wir uns auf den Innenausbau: Trockenbau, Kernsanierung, Brandschutzarbeiten und Q3-Verspachtelung.',
+        text: 'Statt alles anzubieten, konzentrieren wir uns auf den Innenausbau: Trockenbau, Kernsanierung und Brandschutzarbeiten.',
       },
     ],
     projectsTitle: 'Projekte',
@@ -233,15 +228,10 @@ const en: UiStrings = {
     request: 'Request a project',
     language: 'Language',
   },
-  whatsapp: {
-    label: 'Message us on WhatsApp',
-    short: 'WhatsApp',
-    newTab: '(opens in a new window)',
-  },
   home: {
     seoTitle: 'OSOBAU | Drywall & Full Refurbishment in Berlin',
     seoDescription:
-      'OSOBAU from Berlin: drywall, full refurbishment, fire protection work and Q3 surface finishing for commercial and public clients in Berlin & Brandenburg.',
+      'OSOBAU from Berlin: drywall, full refurbishment and fire protection work for commercial and public clients in Berlin & Brandenburg.',
     heroAlt: 'Aerial view of the AOK building in Magdeburg with courtyard – OSOBAU reference',
     hero1: 'Shaping spaces.',
     hero2: 'Creating value.',
@@ -255,12 +245,12 @@ const en: UiStrings = {
     servicesTitle: 'Our services',
     servicesAccent: 'at a glance.',
     servicesIntro:
-      'From the room layout to the finished surface. Four service areas, carried out to a high standard of clean, professional work.',
+      'From the room layout to the finished surface. Three service areas, carried out to a high standard of clean, professional work.',
     aboutTitle: 'About us',
     aboutAccent: 'Quality shows in the details.',
     aboutHeading: 'Drywall and interior fit-out from Berlin.',
     aboutP1:
-      'OSOBAU is a Berlin company specialising in drywall, full refurbishment, fire protection work in interior fit-out and Q3 surface finishing. We work for commercial and public clients, investors as well as construction companies and general contractors.',
+      'OSOBAU is a Berlin company specialising in drywall, full refurbishment and fire protection work in interior fit-out. We work for commercial and public clients, investors as well as construction companies and general contractors.',
     aboutP2:
       'We are based in Berlin-Mitte and focus on Berlin and Brandenburg. We have also carried out projects in other regions, such as drywall and fire protection work at Saarterrassen Plaza Nord in Saarbrücken and drywall work in the AOK building in Magdeburg.',
     valuesTitle: 'What we stand for',
@@ -271,11 +261,11 @@ const en: UiStrings = {
       },
       {
         title: 'Quality',
-        text: 'Clean joints, straight surfaces and precise workmanship, right down to Q3-level surface finishing.',
+        text: 'Clean joints, straight surfaces and precise workmanship, right down to the finished surface.',
       },
       {
         title: 'Specialisation',
-        text: 'Instead of offering everything, we focus on interior fit-out: drywall, full refurbishment, fire protection work and Q3 surface finishing.',
+        text: 'Instead of offering everything, we focus on interior fit-out: drywall, full refurbishment and fire protection work.',
       },
     ],
     projectsTitle: 'Projects',

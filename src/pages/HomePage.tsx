@@ -12,7 +12,6 @@ import ResponsiveImage from '../components/ResponsiveImage';
 import ContactForm from '../components/ContactForm';
 import Placeholder from '../components/Placeholder';
 import HeroMedia from '../components/HeroMedia';
-import { WhatsAppIcon } from '../components/WhatsAppButton';
 import ServiceCard from '../components/ServiceCard';
 import { getServices } from '../data/services';
 import { getAudiences } from '../data/audiences';
@@ -28,8 +27,8 @@ import type { SiteImage } from '../data/images';
 
 /*
  * Bildverteilung Startseite – jedes Motiv genau einmal:
- *   Hero: AOK-Luftbild · Leistungen: Saarterrassen -02, -04, -01, Q3 -01
- *   Projekte: Saarterrassen -03, AOK (gleiches Motiv wie Hero), Tabbertstraße, Q3 -02 · Über uns: ohne Bild
+ *   Hero: AOK-Luftbild · Leistungen: Saarterrassen -02, -04, -01
+ *   Projekte: Saarterrassen -03, AOK, Tabbertstraße, Q3 -01 · Über uns: Saarterrassen -01
  */
 export default function HomePage() {
   const lang = useLang();
@@ -44,8 +43,8 @@ export default function HomePage() {
   const heroCaption = { label: projects[1].title, to: lp(`/projekte/${projects[1].slug}`, lang) };
   /** Über uns: Besprechungsraum Saarterrassen (Innenausbau) */
   const aboutImage: SiteImage = { ...projects[0].images[1] };
-  /** Alle Referenzen; Q3 mit 2. Bild (das 1. Bild steht bei den Leistungen) */
-  const homeProjects = projects.map((p) => ({ project: p, cover: p.slug === 'q3-verspachtelung' ? p.images[1] : p.images[0] }));
+  /** Alle Referenzen mit ihrem Titelbild (Q3 ist keine Leistung mehr, nur noch Projekt-Referenz) */
+  const homeProjects = projects.map((p) => ({ project: p, cover: p.images[0] }));
 
   return (
     <Page>
@@ -160,7 +159,7 @@ export default function HomePage() {
           />
 
           {/* Vier Karten nebeneinander: Foto, Titel, Kurztext */}
-          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <ul className="grid gap-5 md:grid-cols-3 lg:gap-6">
             {services.map((s, i) => (
               <Reveal as="li" key={s.slug} delay={i * 0.06}>
                 <ServiceCard service={s} />
@@ -381,21 +380,6 @@ export default function HomePage() {
                   <dd className="mt-1 text-lg font-medium break-all">
                     <a href={`mailto:${site.contact.email}`} className="link-underline">
                       {site.contact.email}
-                    </a>
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-sm text-stone">WhatsApp</dt>
-                  <dd className="mt-1 text-lg font-medium">
-                    <a
-                      href={site.contact.whatsappHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-underline inline-flex items-center gap-2"
-                    >
-                      <WhatsAppIcon className="size-5 text-[#1f9d55]" />
-                      {t.whatsapp.label}
-                      <span className="sr-only"> {t.whatsapp.newTab}</span>
                     </a>
                   </dd>
                 </div>

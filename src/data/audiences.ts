@@ -30,7 +30,7 @@ export const audienceEntries: AudienceEntry[] = [
     points: [
       'Trockenbau und Innenausbau für Neubau- und Bestandsprojekte',
       'Kernsanierung bestehender Immobilien',
-      'Q3-Oberflächen für hochwertige Wand- und Deckenflächen',
+      'Brandschutzarbeiten im Rahmen des Innenausbaus',
     ],
     cta: 'Projekt anfragen',
   },
@@ -61,7 +61,7 @@ export const audienceEntriesEn: AudienceEntry[] = [
     points: [
       'Drywall and interior fit-out for new and existing buildings',
       'Full refurbishment of existing properties',
-      'Q3 surfaces for high-quality walls and ceilings',
+      'Fire protection work as part of interior fit-out',
     ],
     cta: 'Request a project',
   },

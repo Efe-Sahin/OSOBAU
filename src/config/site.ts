@@ -45,8 +45,6 @@ export const site = {
     /** Briefing: „Gut erreichbar: durchgehend“ – vom Kunden für die Website bestätigt */
     openingHours: 'Durchgehend erreichbar' as MaybeMissing,
     openingHoursEn: 'Available at all times',
-    /** WhatsApp (gleiche Nummer wie Telefon, vom Kunden bestätigt) – reiner Link, kein eingebundenes Skript */
-    whatsappHref: 'https://wa.me/4915566996039',
   },
 
   /**

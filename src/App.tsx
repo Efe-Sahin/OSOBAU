@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SkipLink from './components/SkipLink';
-import WhatsAppButton from './components/WhatsAppButton';
 import HomePage from './pages/HomePage';
 
 // Unterseiten werden bei Bedarf geladen (kleineres Start-Bundle)
@@ -47,7 +46,6 @@ export default function App() {
         </AnimatePresence>
       </Suspense>
       <Footer />
-      <WhatsAppButton />
     </MotionConfig>
   );
 }

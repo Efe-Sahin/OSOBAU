@@ -8,6 +8,7 @@ import type { SiteImage } from './images';
  * müssen vor Veröffentlichung von OSOBAU bestätigt werden.
  */
 
+/** 'q3-verspachtelung' ist keine eigene Leistung mehr, bleibt aber als Projekt-Referenz (siehe projects.ts) */
 export type ServiceSlug = 'trockenbau' | 'kernsanierung' | 'brandschutzarbeiten' | 'q3-verspachtelung';
 
 export interface Service {
@@ -97,33 +98,10 @@ export const services: Service[] = [
         'Trockenbau- und Ausbauarbeiten von OSOBAU unter Berücksichtigung projektbezogener Brandschutzanforderungen – z. B. bei der Referenz Saarterrassen Plaza Nord.',
     },
   },
-  {
-    slug: 'q3-verspachtelung',
-    number: '04',
-    title: 'Q3-Verspachtelung',
-    short:
-      'Hochwertige Verspachtelungsarbeiten für glatte Wand- und Deckenoberflächen mit erhöhten Anforderungen an die Oberflächenqualität.',
-    intro:
-      'Die Qualitätsstufe Q3 geht über die Standardverspachtelung hinaus: Neben dem Verspachteln der Fugen wird die gesamte Oberfläche zusätzlich scharf abgezogen. So entstehen glatte Flächen für erhöhte Anforderungen – etwa für feine Anstriche oder Streiflicht.',
-    scope: [
-      'Verspachtelung in Qualitätsstufe Q3',
-      'Glatte Wand- und Deckenoberflächen',
-      'Vorbereitung für hochwertige Beschichtungen',
-    ],
-    image: {
-      key: 'q3-verspachtelung-01',
-      alt: 'Baustelle mit Gerüst – Bildmaterial zur Leistungsreferenz Q3-Verspachtelung',
-    },
-    seo: {
-      title: 'Q3-Verspachtelung – glatte Wand- & Deckenflächen | OSOBAU',
-      description:
-        'Q3-Verspachtelung von OSOBAU: Verspachtelungsarbeiten in Qualitätsstufe Q3 für hochwertige, glatte Wand- und Deckenoberflächen.',
-    },
-  },
 ];
 
 /** Englische Fassung: nur die auf der Website sichtbaren Felder werden überschrieben */
-const servicesEnOverrides: Record<ServiceSlug, { title: string; short: string; alt: string }> = {
+const servicesEnOverrides: Partial<Record<ServiceSlug, { title: string; short: string; alt: string }>> = {
   trockenbau: {
     title: 'Drywall',
     short: 'Flexible room solutions and professional drywall work for new builds, fit-outs and modernisation.',
@@ -139,15 +117,10 @@ const servicesEnOverrides: Record<ServiceSlug, { title: string; short: string; a
     short: 'Professional drywall and fit-out work in line with project-specific fire protection requirements.',
     alt: 'Meeting room with ceiling and light strip – Saarterrassen Plaza Nord reference',
   },
-  'q3-verspachtelung': {
-    title: 'Q3 surface finishing',
-    short: 'High-quality filling work for smooth wall and ceiling surfaces with increased surface quality requirements.',
-    alt: 'Construction site with scaffolding – images for the Q3 surface finishing service reference',
-  },
 };
 
 export const servicesEn: Service[] = services.map((s) => {
-  const o = servicesEnOverrides[s.slug];
+  const o = servicesEnOverrides[s.slug]!;
   return { ...s, title: o.title, short: o.short, image: { ...s.image, alt: o.alt } };
 });
 

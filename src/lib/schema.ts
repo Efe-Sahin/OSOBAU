@@ -26,7 +26,7 @@ export function organizationSchema() {
     email: site.contact.email,
     address,
     areaServed: site.serviceArea.map((name) => ({ '@type': 'AdministrativeArea', name })),
-    knowsAbout: ['Trockenbau', 'Kernsanierung', 'Brandschutzarbeiten im Trockenbau', 'Q3-Verspachtelung', 'Innenausbau'],
+    knowsAbout: ['Trockenbau', 'Kernsanierung', 'Brandschutzarbeiten im Trockenbau', 'Innenausbau'],
   };
 }
 

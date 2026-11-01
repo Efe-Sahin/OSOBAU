@@ -11,7 +11,7 @@ export interface Faq {
 export const faqs: Faq[] = [
   {
     q: 'Welche Leistungen bietet OSOBAU an?',
-    a: 'Trockenbau, Kernsanierung, Brandschutzarbeiten im Rahmen des Ausbaus und Verspachtelung in Qualitätsstufe Q3.',
+    a: 'Trockenbau, Kernsanierung und Brandschutzarbeiten im Rahmen des Innenausbaus.',
     link: { label: 'Alle Leistungen', to: '/#leistungen' },
   },
   {
@@ -41,7 +41,7 @@ export const faqs: Faq[] = [
 export const faqsEn: Faq[] = [
   {
     q: 'What services does OSOBAU offer?',
-    a: 'Drywall, full refurbishment, fire protection work as part of interior fit-out, and Q3-level surface finishing.',
+    a: 'Drywall, full refurbishment and fire protection work as part of interior fit-out.',
     link: { label: 'All services', to: '/#leistungen' },
   },
   {

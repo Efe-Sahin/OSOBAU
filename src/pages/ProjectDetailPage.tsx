@@ -28,6 +28,7 @@ export default function ProjectDetailPage() {
   const cover = project.images[0];
   const others = getProjects(lang).filter((p) => p.slug !== project.slug).slice(0, 3);
   const hasVisualization = project.images.some((i) => i.isVisualization);
+  const linkedServices = project.services.map((s) => getService(s, lang)).filter((svc) => svc !== undefined);
 
   return (
     <Page>
@@ -99,11 +100,10 @@ export default function ProjectDetailPage() {
                     {project.location?.address ?? project.location?.city ?? pt.noLocation}
                   </Fact>
                   <Fact label={pt.services}>
-                    <ul className="grid gap-1">
-                      {project.services.map((s) => {
-                        const svc = getService(s, lang);
-                        return svc ? (
-                          <li key={s}>
+                    {linkedServices.length > 0 ? (
+                      <ul className="grid gap-1">
+                        {linkedServices.map((svc) => (
+                          <li key={svc.slug}>
                             <Link
                               to={lp(`/#leistung-${svc.slug}`, lang)}
                               className="inline-block py-0.5 underline underline-offset-4 hover:text-bronze"
@@ -111,9 +111,12 @@ export default function ProjectDetailPage() {
                               {svc.title}
                             </Link>
                           </li>
-                        ) : null;
-                      })}
-                    </ul>
+                        ))}
+                      </ul>
+                    ) : (
+                      // z. B. Q3-Verspachtelung: Referenz ohne eigene Leistungsseite → nur als Text
+                      project.servicesLabel
+                    )}
                   </Fact>
                 </dl>
                 {hasVisualization && (
