@@ -189,6 +189,24 @@ export default function HomePage() {
             <p className="mt-5 leading-relaxed text-stone">{h.aboutP2}</p>
           </Reveal>
         </div>
+
+        {/* Wofür wir stehen – Unterscheidungsmerkmale laut Briefing: Erfahrung, Qualität, Spezialisierung */}
+        <div className="container-x mt-16 lg:mt-24">
+          <Reveal>
+            <h3 className="display-md text-center">{h.valuesTitle}</h3>
+          </Reveal>
+          <ul className="mt-10 grid gap-5 md:grid-cols-3 lg:mt-12 lg:gap-6">
+            {h.values.map((v, i) => (
+              <Reveal as="li" key={v.title} delay={i * 0.08} className="min-w-0 border border-line bg-paper p-7 lg:p-9">
+                <span className="font-mono text-[0.8rem] tracking-[0.06em] text-bronze-ink" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h4 className="mt-4 font-display text-xl font-semibold tracking-[-0.01em]">{v.title}</h4>
+                <p className="mt-3 leading-relaxed text-stone">{v.text}</p>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* ---------- Projekte ---------- */}
