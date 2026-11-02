@@ -76,13 +76,16 @@ export default function HomePage() {
         <div className="container-x w-full pt-32 pb-8 lg:pb-10">
           <motion.h1
             id="hero-title"
-            className="font-display text-[clamp(2.75rem,7.6vw,7.75rem)] leading-[0.98] font-semibold tracking-[-0.03em]"
+            className="font-display text-[clamp(2.3rem,6.4vw,6.25rem)] leading-[1.03] font-extrabold tracking-[0.005em] uppercase"
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
           >
-            <span className="block">{h.hero1}</span>{' '}
-            <span className="block text-white/90 lg:pl-[22%]">{h.hero2}</span>
+            {/* Leitsatz im Stil großer Bau-Websites: Großbuchstaben, letzter Satz hellblau hinterlegt */}
+            <span className="block">{h.aboutClaim[0]}</span> <span className="block">{h.aboutClaim[1]}</span>{' '}
+            <span className="block">
+              <span className="box-decoration-clone bg-bronze px-[0.16em] text-[#071a33]">{h.aboutClaim[2]}</span>
+            </span>
           </motion.h1>
 
           <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-12 lg:items-end">
@@ -155,19 +158,19 @@ export default function HomePage() {
       {/* ---------- Über uns ---------- */}
       {/* ---------- Über uns (Variante A im Rabe-Stil): Leitsatz auf Dunkel + hellblaue Fläche mit Geschichte ---------- */}
       <section id="ueber-uns" aria-labelledby="about-title">
-        <div className="on-dark relative isolate flex min-h-[460px] items-center overflow-hidden bg-[#071a33] text-white">
-          <ConstructionLines className="absolute inset-0 -z-10 h-full w-full text-bronze/15" />
+        <div className="on-dark relative isolate flex min-h-[360px] items-center overflow-hidden bg-[#071a33] text-white">
+          <ConstructionLines className="absolute inset-0 -z-20 h-full w-full text-bronze" />
+          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#071a33_0%,rgb(7_26_51/0.45)_55%,rgb(7_26_51/0)_100%)]" aria-hidden="true" />
           <div className="container-x py-24 lg:py-32">
             <Reveal>
-              <p className="font-mono text-[0.75rem] tracking-[0.12em] text-bronze uppercase">{h.aboutTitle}</p>
+              <p className="font-mono text-[0.75rem] tracking-[0.12em] text-bronze uppercase">{h.aboutEyebrow}</p>
               <h2
                 id="about-title"
                 className="mt-4 font-display text-[clamp(2.2rem,6vw,5rem)] leading-[1.04] font-extrabold tracking-[0.005em] uppercase"
               >
-                <span className="block">{h.aboutClaim[0]}</span> <span className="block">{h.aboutClaim[1]}</span>{' '}
-                <span className="block">
-                  <span className="box-decoration-clone bg-bronze px-[0.18em] text-[#071a33]">{h.aboutClaim[2]}</span>
-                </span>
+                {h.aboutWho[0]}{' '}
+                <span className="box-decoration-clone bg-bronze px-[0.16em] text-[#071a33]">{h.aboutWho[1]}</span>
+                <span className="text-bronze" aria-hidden="true">.</span>
               </h2>
             </Reveal>
           </div>
