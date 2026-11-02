@@ -26,6 +26,8 @@ export function organizationSchema() {
     email: site.contact.email,
     address,
     areaServed: site.serviceArea.map((name) => ({ '@type': 'AdministrativeArea', name })),
+    foundingDate: '2022',
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: 13 },
     knowsAbout: ['Trockenbau', 'Kernsanierung', 'Brandschutzarbeiten im Trockenbau', 'Innenausbau'],
   };
 }

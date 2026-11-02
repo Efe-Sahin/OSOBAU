@@ -46,9 +46,22 @@ const de = {
     aboutAccent: 'Qualität zeigt sich im Detail.',
     aboutHeading: 'Trockenbau und Innenausbau aus Berlin.',
     aboutP1:
-      'OSOBAU ist ein Berliner Unternehmen für Trockenbau, Kernsanierung und Brandschutzarbeiten im Innenausbau. Wir arbeiten für gewerbliche und öffentliche Auftraggeber, Investoren sowie Bau- und Generalunternehmen.',
+      'OSOBAU ist ein Berliner Unternehmen für Trockenbau, Kernsanierung und Brandschutzarbeiten im Innenausbau. Seit 2022 arbeiten wir für gewerbliche und öffentliche Auftraggeber, Investoren sowie Bau- und Generalunternehmen.',
     aboutP2:
       'Unser Sitz ist in Berlin-Mitte, unser Schwerpunkt liegt in Berlin und Brandenburg. Darüber hinaus haben wir Projekte in anderen Regionen ausgeführt, etwa Trockenbau- und Brandschutzarbeiten bei den Saarterrassen Plaza Nord in Saarbrücken und Trockenbauarbeiten im AOK-Gebäude in Magdeburg.',
+    facts: [
+      { value: 'Seit 2022', label: 'gegründet in Berlin' },
+      { value: '13', label: 'Mitarbeitende' },
+      { value: 'Berlin & Brandenburg', label: 'Schwerpunkt' },
+    ],
+    factsLabel: 'OSOBAU in Zahlen',
+    storyTitle: 'Unsere Geschichte',
+    story: [
+      'OSOBAU wurde 2022 aus dem Wunsch heraus gegründet, etwas Eigenes aufzubauen und mit guter Arbeit etwas Bleibendes zu schaffen. Für uns bedeutet Bauen mehr als die Umsetzung eines Auftrags: Hinter jedem Projekt stehen Menschen, ihre Ideen und das Vertrauen, das sie uns entgegenbringen.',
+      'Heute sind wir ein Team aus 13 Mitarbeitenden, das diesen Weg gemeinsam geht. Uns ist wichtig, füreinander einzustehen, mit anzupacken und auch bei Herausforderungen gemeinsam Lösungen zu finden. Denn gute Ergebnisse entstehen dort, wo Menschen zusammenarbeiten und Verantwortung übernehmen.',
+      'Wir möchten, dass unsere Kunden sich von der ersten Absprache bis zur Fertigstellung gut aufgehoben fühlen. Sorgfalt, ehrliche Kommunikation und verlässliche Absprachen sind deshalb unser Anspruch. Mit OSOBAU wollen wir nicht nur Projekte verwirklichen, sondern langfristiges Vertrauen aufbauen – durch Arbeit, hinter der wir als Team stehen können.',
+    ],
+    storySign: 'Das Team von OSOBAU',
     valuesTitle: 'Wofür wir stehen',
     values: [
       {
@@ -250,9 +263,22 @@ const en: UiStrings = {
     aboutAccent: 'Quality shows in the details.',
     aboutHeading: 'Drywall and interior fit-out from Berlin.',
     aboutP1:
-      'OSOBAU is a Berlin company specialising in drywall, full refurbishment and fire protection work in interior fit-out. We work for commercial and public clients, investors as well as construction companies and general contractors.',
+      'OSOBAU is a Berlin company specialising in drywall, full refurbishment and fire protection work in interior fit-out. Since 2022, we have worked for commercial and public clients, investors as well as construction companies and general contractors.',
     aboutP2:
       'We are based in Berlin-Mitte and focus on Berlin and Brandenburg. We have also carried out projects in other regions, such as drywall and fire protection work at Saarterrassen Plaza Nord in Saarbrücken and drywall work in the AOK building in Magdeburg.',
+    facts: [
+      { value: 'Since 2022', label: 'founded in Berlin' },
+      { value: '13', label: 'employees' },
+      { value: 'Berlin & Brandenburg', label: 'focus region' },
+    ],
+    factsLabel: 'OSOBAU in figures',
+    storyTitle: 'Our story',
+    story: [
+      'OSOBAU was founded in 2022 out of the desire to build something of our own and to create something lasting through good work. For us, building means more than carrying out a contract: behind every project are people, their ideas and the trust they place in us.',
+      'Today we are a team of 13 employees who walk this path together. It matters to us to stand up for one another, to roll up our sleeves and to find solutions together, even when things get challenging. Because good results come about where people work together and take responsibility.',
+      'We want our clients to feel well looked after from the first conversation to completion. Care, honest communication and reliable agreements are therefore our standard. With OSOBAU, we want not only to deliver projects but to build long-term trust – through work that we can stand behind as a team.',
+    ],
+    storySign: 'The OSOBAU team',
     valuesTitle: 'What we stand for',
     values: [
       {

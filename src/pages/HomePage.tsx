@@ -159,6 +159,26 @@ export default function HomePage() {
       <section id="ueber-uns" aria-labelledby="about-title" className="section bg-white">
         <div className="container-x">
           <SectionHeader id="about-title" title={h.aboutTitle} accent={h.aboutAccent} />
+
+          {/* Kennzahlen (vom Kunden bestätigt): Gründungsjahr, Teamgröße, Region */}
+          <Reveal>
+            <dl
+              aria-label={h.factsLabel}
+              className="mx-auto mb-14 grid max-w-5xl border-y border-line sm:grid-cols-3 lg:mb-20"
+            >
+              {h.facts.map((f, i) => (
+                <div
+                  key={f.label}
+                  className={`flex flex-col-reverse items-center px-4 py-6 text-center ${i > 0 ? 'border-t border-line sm:border-t-0 sm:border-l' : ''}`}
+                >
+                  <dt className="mt-2 font-mono text-[0.75rem] tracking-[0.08em] text-stone uppercase">{f.label}</dt>
+                  <dd className="font-display text-[clamp(1.5rem,2.6vw,2.1rem)] leading-tight font-semibold tracking-[-0.02em]">
+                    {f.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
         </div>
         <div className="container-x grid gap-10 md:grid-cols-2 md:items-stretch md:gap-14 lg:gap-20">
           {/* Bild passt sich der Höhe des Textblocks an */}
@@ -171,6 +191,24 @@ export default function HomePage() {
             <h3 className="display-md hyphens-manual">{h.aboutHeading}</h3>
             <p className="mt-6 text-[1.1rem] leading-relaxed text-ink/85">{h.aboutP1}</p>
             <p className="mt-5 leading-relaxed text-stone">{h.aboutP2}</p>
+          </Reveal>
+        </div>
+
+        {/* Unsere Geschichte – Text vom Kunden, als Team ohne Namen */}
+        <div className="container-x mt-16 lg:mt-24">
+          <Reveal>
+            <figure className="on-dark mx-auto max-w-4xl bg-night p-8 text-white sm:p-12 lg:p-16">
+              <h3 className="display-md">{h.storyTitle}</h3>
+              <div className="mt-8 grid gap-5 text-[1.05rem] leading-relaxed text-white/85 lg:text-[1.1rem]">
+                {h.story.map((para) => (
+                  <p key={para.slice(0, 24)}>{para}</p>
+                ))}
+              </div>
+              <figcaption className="mt-10 flex items-center gap-4 border-t border-line-dark pt-6 font-display text-lg font-semibold">
+                <span className="h-px w-8 bg-bronze" aria-hidden="true" />
+                {h.storySign}
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
 
