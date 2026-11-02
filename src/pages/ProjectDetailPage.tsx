@@ -114,7 +114,7 @@ export default function ProjectDetailPage() {
                         ))}
                       </ul>
                     ) : (
-                      // z. B. Q3-Verspachtelung: Referenz ohne eigene Leistungsseite → nur als Text
+                      // z. B. Putzarbeiten Q3: Referenz ohne eigene Leistungsseite → nur als Text
                       project.servicesLabel
                     )}
                   </Fact>

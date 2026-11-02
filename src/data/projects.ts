@@ -118,30 +118,30 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: 'q3-verspachtelung',
+    slug: 'putzarbeiten-q3',
     number: '04',
-    title: 'Q3-Verspachtelung',
+    title: 'Putzarbeiten Q3',
     subtitle: 'Leistungsreferenz Oberflächen',
     kind: 'leistungsreferenz',
     services: ['q3-verspachtelung'],
-    servicesLabel: 'Q3-Oberflächenverspachtelung',
+    servicesLabel: 'Verputz in Qualitätsstufe Q3',
     description:
-      'Fachgerechte Verspachtelungsarbeiten in Qualitätsstufe Q3 zur Herstellung hochwertiger, glatter Wand- und Deckenoberflächen.',
+      'Fachgerechte Putzarbeiten in Qualitätsstufe Q3 zur Herstellung hochwertiger, glatter Wand- und Deckenoberflächen.',
     images: [
       {
         key: 'q3-verspachtelung-01',
-        alt: 'Baustelle mit eingerüstetem Gebäude und Treppenturm – Bildmaterial zur Leistungsreferenz Q3-Verspachtelung',
+        alt: 'Baustelle mit eingerüstetem Gebäude und Treppenturm – Bildmaterial zur Leistungsreferenz Putzarbeiten Q3',
       },
       {
         key: 'q3-verspachtelung-02',
-        alt: 'Handwerker auf dem Gerüst einer Baustelle – Bildmaterial zur Leistungsreferenz Q3-Verspachtelung',
+        alt: 'Handwerker auf dem Gerüst einer Baustelle – Bildmaterial zur Leistungsreferenz Putzarbeiten Q3',
         focus: '50% 45%',
       },
     ],
     seo: {
-      title: 'Q3-Verspachtelung – Leistungsreferenz | OSOBAU',
+      title: 'Putzarbeiten in Qualitätsstufe Q3 – Leistungsreferenz | OSOBAU',
       description:
-        'Leistungsreferenz von OSOBAU: Verspachtelungsarbeiten in Qualitätsstufe Q3 für hochwertige, glatte Wand- und Deckenoberflächen.',
+        'Leistungsreferenz von OSOBAU: Putzarbeiten in Qualitätsstufe Q3 für hochwertige, glatte Wand- und Deckenoberflächen.',
     },
   },
 ];
@@ -196,18 +196,18 @@ const projectsEnOverrides: Record<
         'OSOBAU reference in Berlin: drywall work as part of the structural modernisation at Tabbertstraße 2–3, 12459 Berlin.',
     },
   },
-  'q3-verspachtelung': {
-    title: 'Q3 surface finishing',
+  'putzarbeiten-q3': {
+    title: 'Q3 plastering',
     subtitle: 'Service reference – surfaces',
-    servicesLabel: 'Q3 surface finishing',
-    description: 'Professional Q3-level filling work to create high-quality, smooth wall and ceiling surfaces.',
+    servicesLabel: 'Plastering to quality level Q3',
+    description: 'Professional plastering to quality level Q3 to create high-quality, smooth wall and ceiling surfaces.',
     alts: [
-      'Construction site with scaffolded building and stair tower – images for the Q3 surface finishing reference',
-      'Worker on the scaffolding of a construction site – images for the Q3 surface finishing reference',
+      'Construction site with scaffolded building and stair tower – images for the Q3 plastering reference',
+      'Worker on the scaffolding of a construction site – images for the Q3 plastering reference',
     ],
     seo: {
-      title: 'Q3 Surface Finishing – Service Reference | OSOBAU',
-      description: 'OSOBAU service reference: Q3-level filling work for high-quality, smooth wall and ceiling surfaces.',
+      title: 'Plastering to Quality Level Q3 – Service Reference | OSOBAU',
+      description: 'OSOBAU service reference: plastering to quality level Q3 for high-quality, smooth wall and ceiling surfaces.',
     },
   },
 };
