@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
-import { Check, Phone } from 'lucide-react';
+import { ArrowRight, Check, Phone } from 'lucide-react';
 
 import Page from '../components/Page';
 import Seo from '../components/Seo';
@@ -8,10 +8,10 @@ import Button from '../components/Button';
 import Reveal from '../components/Reveal';
 import SectionHeader from '../components/SectionHeader';
 import ProjectTile from '../components/ProjectTile';
-import ResponsiveImage from '../components/ResponsiveImage';
 import ContactForm from '../components/ContactForm';
 import Placeholder from '../components/Placeholder';
 import HeroMedia from '../components/HeroMedia';
+import ConstructionLines from '../components/ConstructionLines';
 import ServiceCard from '../components/ServiceCard';
 import { getServices } from '../data/services';
 import { getAudiences } from '../data/audiences';
@@ -41,8 +41,6 @@ export default function HomePage() {
 
   const heroImage: SiteImage = { key: 'aok-gebaeude-magdeburg-luftbild', alt: h.heroAlt, focus: '50% 45%' };
   const heroCaption = { label: projects[1].title, to: lp(`/projekte/${projects[1].slug}`, lang) };
-  /** Über uns: Besprechungsraum Saarterrassen (Innenausbau) */
-  const aboutImage: SiteImage = { ...projects[0].images[1] };
   /** Alle Referenzen mit ihrem Titelbild (Q3 ist keine Leistung mehr, nur noch Projekt-Referenz) */
   const homeProjects = projects.map((p) => ({ project: p, cover: p.images[0] }));
 
@@ -155,79 +153,51 @@ export default function HomePage() {
       </section>
 
       {/* ---------- Über uns ---------- */}
-      {/* Variante B: Projektfoto links, Text rechts (Texte SEO/GEO-optimiert) */}
-      <section id="ueber-uns" aria-labelledby="about-title" className="section bg-white">
-        <div className="container-x">
-          <SectionHeader id="about-title" title={h.aboutTitle} accent={h.aboutAccent} />
-
-          {/* Kennzahlen (vom Kunden bestätigt): Gründungsjahr, Teamgröße, Region */}
-          <Reveal>
-            <dl
-              aria-label={h.factsLabel}
-              className="mx-auto mb-14 grid max-w-5xl border-y border-line sm:grid-cols-3 lg:mb-20"
-            >
-              {h.facts.map((f, i) => (
-                <div
-                  key={f.label}
-                  className={`flex flex-col-reverse items-center px-4 py-6 text-center ${i > 0 ? 'border-t border-line sm:border-t-0 sm:border-l' : ''}`}
-                >
-                  <dt className="mt-2 font-mono text-[0.75rem] tracking-[0.08em] text-stone uppercase">{f.label}</dt>
-                  <dd className="font-display text-[clamp(1.5rem,2.6vw,2.1rem)] leading-tight font-semibold tracking-[-0.02em]">
-                    {f.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
-        </div>
-        <div className="container-x grid gap-10 md:grid-cols-2 md:items-stretch md:gap-14 lg:gap-20">
-          {/* Bild passt sich der Höhe des Textblocks an */}
-          <Reveal className="h-full">
-            <div className="relative aspect-[4/3] h-full overflow-hidden md:aspect-auto md:min-h-[420px]">
-              <ResponsiveImage image={aboutImage} fill sizes="(min-width: 768px) 46vw, 100vw" />
-            </div>
-          </Reveal>
-          <Reveal delay={0.1} className="flex flex-col justify-center md:py-6">
-            <h3 className="display-md hyphens-manual">{h.aboutHeading}</h3>
-            <p className="mt-6 text-[1.1rem] leading-relaxed text-ink/85">{h.aboutP1}</p>
-            <p className="mt-5 leading-relaxed text-stone">{h.aboutP2}</p>
-          </Reveal>
+      {/* ---------- Über uns (Variante A im Rabe-Stil): Leitsatz auf Dunkel + hellblaue Fläche mit Geschichte ---------- */}
+      <section id="ueber-uns" aria-labelledby="about-title">
+        <div className="on-dark relative isolate flex min-h-[460px] items-center overflow-hidden bg-[#071a33] text-white">
+          <ConstructionLines className="absolute inset-0 -z-10 h-full w-full text-bronze/15" />
+          <div className="container-x py-24 lg:py-32">
+            <Reveal>
+              <p className="font-mono text-[0.75rem] tracking-[0.12em] text-bronze uppercase">{h.aboutTitle}</p>
+              <h2
+                id="about-title"
+                className="mt-4 font-display text-[clamp(2.2rem,6vw,5rem)] leading-[1.04] font-extrabold tracking-[0.005em] uppercase"
+              >
+                <span className="block">{h.aboutClaim[0]}</span> <span className="block">{h.aboutClaim[1]}</span>{' '}
+                <span className="block">
+                  <span className="box-decoration-clone bg-bronze px-[0.18em] text-[#071a33]">{h.aboutClaim[2]}</span>
+                </span>
+              </h2>
+            </Reveal>
+          </div>
         </div>
 
-        {/* Unsere Geschichte – Text vom Kunden, als Team ohne Namen */}
-        <div className="container-x mt-16 lg:mt-24">
-          <Reveal>
-            <figure className="on-dark mx-auto max-w-4xl bg-night p-8 text-white sm:p-12 lg:p-16">
-              <h3 className="display-md">{h.storyTitle}</h3>
-              <div className="mt-8 grid gap-5 text-[1.05rem] leading-relaxed text-white/85 lg:text-[1.1rem]">
+        <div className="bg-bronze text-[#071a33]">
+          <div className="container-x py-20 lg:py-28">
+            <Reveal className="max-w-4xl">
+              <h3 className="font-display text-[clamp(1.45rem,2.8vw,2.2rem)] leading-[1.1] font-bold tracking-[0.01em] uppercase">
+                {h.bandTitle[0]} <br className="hidden sm:block" />
+                {h.bandTitle[1]}
+                <span className="text-white" aria-hidden="true">.</span>
+              </h3>
+              <p className="mt-8 font-display text-[1.05rem] font-bold">{h.bandSub}</p>
+              <div className="mt-4 grid gap-4 leading-relaxed text-[#071a33]/90">
                 {h.story.map((para) => (
                   <p key={para.slice(0, 24)}>{para}</p>
                 ))}
               </div>
-              <figcaption className="mt-10 flex items-center gap-4 border-t border-line-dark pt-6 font-display text-lg font-semibold">
-                <span className="h-px w-8 bg-bronze" aria-hidden="true" />
-                {h.storySign}
-              </figcaption>
-            </figure>
-          </Reveal>
-        </div>
-
-        {/* Wofür wir stehen – Unterscheidungsmerkmale laut Briefing: Erfahrung, Qualität, Spezialisierung */}
-        <div className="container-x mt-16 lg:mt-24">
-          <Reveal>
-            <h3 className="display-md text-center">{h.valuesTitle}</h3>
-          </Reveal>
-          <ul className="mt-10 grid gap-5 md:grid-cols-3 lg:mt-12 lg:gap-6">
-            {h.values.map((v, i) => (
-              <Reveal as="li" key={v.title} delay={i * 0.08} className="min-w-0 border border-line bg-paper p-7 lg:p-9">
-                <span className="font-mono text-[0.8rem] tracking-[0.06em] text-bronze-ink" aria-hidden="true">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <h4 className="mt-4 font-display text-xl font-semibold tracking-[-0.01em]">{v.title}</h4>
-                <p className="mt-3 leading-relaxed text-stone">{v.text}</p>
-              </Reveal>
-            ))}
-          </ul>
+              <div className="mt-10">
+                <Link
+                  to={lp('/#projekte', lang)}
+                  className="group inline-flex items-center gap-3 bg-[#071a33] px-6 py-3.5 text-[0.78rem] font-semibold tracking-[0.12em] text-white uppercase transition-colors hover:bg-night-2"
+                >
+                  {h.bandButton}
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2} aria-hidden="true" />
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

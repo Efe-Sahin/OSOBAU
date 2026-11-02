@@ -55,6 +55,10 @@ const de = {
       { value: 'Berlin & Brandenburg', label: 'Schwerpunkt' },
     ],
     factsLabel: 'OSOBAU in Zahlen',
+    aboutClaim: ['Wir packen an.', 'Wir halten Wort.', 'Wir bauen Vertrauen.'],
+    bandTitle: ['Etwas Eigenes aufbauen,', 'Bleibendes schaffen'],
+    bandSub: 'OSOBAU – Trockenbau und Innenausbau aus Berlin, seit 2022',
+    bandButton: 'Unsere Projekte',
     storyTitle: 'Unsere Geschichte',
     story: [
       'OSOBAU wurde 2022 aus dem Wunsch heraus gegründet, etwas Eigenes aufzubauen und mit guter Arbeit etwas Bleibendes zu schaffen. Für uns bedeutet Bauen mehr als die Umsetzung eines Auftrags: Hinter jedem Projekt stehen Menschen, ihre Ideen und das Vertrauen, das sie uns entgegenbringen.',
@@ -272,6 +276,10 @@ const en: UiStrings = {
       { value: 'Berlin & Brandenburg', label: 'focus region' },
     ],
     factsLabel: 'OSOBAU in figures',
+    aboutClaim: ['We roll up our sleeves.', 'We keep our word.', 'We build trust.'],
+    bandTitle: ['Building something of our own,', 'creating something lasting'],
+    bandSub: 'OSOBAU – drywall and interior fit-out from Berlin, since 2022',
+    bandButton: 'Our projects',
     storyTitle: 'Our story',
     story: [
       'OSOBAU was founded in 2022 out of the desire to build something of our own and to create something lasting through good work. For us, building means more than carrying out a contract: behind every project are people, their ideas and the trust they place in us.',
