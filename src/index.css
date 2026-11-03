@@ -73,9 +73,13 @@
   h4 {
     @apply font-display;
     text-wrap: balance;
-    /* Lange deutsche Komposita (z. B. „Datenschutzerklärung“) dürfen auf schmalen Bildschirmen trennen */
+    /* Überschriften nie mitten im Wort trennen – nur auf sehr schmalen Handys, damit lange
+       Komposita (z. B. „Datenschutzerklärung“) nicht aus dem Bild laufen */
     overflow-wrap: break-word;
-    hyphens: auto;
+    hyphens: manual;
+    @media (max-width: 479px) {
+      hyphens: auto;
+    }
   }
   p {
     text-wrap: pretty;
