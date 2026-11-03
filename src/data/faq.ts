@@ -15,10 +15,6 @@ export const faqs: Faq[] = [
     link: { label: 'Alle Leistungen', to: '/#leistungen' },
   },
   {
-    q: 'Für wen arbeitet OSOBAU?',
-    a: 'Für gewerbliche und öffentliche Auftraggeber, Investoren und Projektentwickler sowie Bau- und Generalunternehmen.',
-  },
-  {
     q: 'Wo ist OSOBAU tätig?',
     a: 'Unser Sitz ist in Berlin, der Schwerpunkt liegt in Berlin und Brandenburg. Referenzprojekte haben wir unter anderem auch in Saarbrücken und Magdeburg ausgeführt. Sprechen Sie uns zu Ihrem Standort an.',
   },
@@ -31,11 +27,6 @@ export const faqs: Faq[] = [
     q: 'Was kostet mein Projekt?',
     a: 'Jedes Bauvorhaben ist anders. Ein Angebot erstellen wir auf Grundlage Ihrer Angaben, Pläne oder Leistungsverzeichnisse. Je genauer die Unterlagen, desto belastbarer das Angebot.',
   },
-  {
-    q: 'Arbeiten Sie auch bei öffentlichen Ausschreibungen?',
-    a: 'Ja. Senden Sie uns die Ausschreibungsunterlagen bzw. das Leistungsverzeichnis gern per E-Mail oder über das Anfrageformular zu.',
-    link: { label: 'Projekt anfragen', to: '/#kontakt' },
-  },
 ];
 
 export const faqsEn: Faq[] = [
@@ -43,10 +34,6 @@ export const faqsEn: Faq[] = [
     q: 'What services does OSOBAU offer?',
     a: 'Drywall, full refurbishment and fire protection work as part of interior fit-out.',
     link: { label: 'All services', to: '/#leistungen' },
-  },
-  {
-    q: 'Who does OSOBAU work for?',
-    a: 'For commercial and public clients, investors and project developers, as well as construction companies and general contractors.',
   },
   {
     q: 'Where does OSOBAU work?',
@@ -60,11 +47,6 @@ export const faqsEn: Faq[] = [
   {
     q: 'What will my project cost?',
     a: 'Every construction project is different. We prepare a quote based on your details, plans or bills of quantities. The more precise the documents, the more reliable the quote.',
-  },
-  {
-    q: 'Do you also take part in public tenders?',
-    a: 'Yes. Feel free to send us the tender documents or the bill of quantities by email or via the request form.',
-    link: { label: 'Request a project', to: '/#kontakt' },
   },
 ];
 
