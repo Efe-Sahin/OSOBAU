@@ -256,7 +256,7 @@ export default function ContactForm() {
             type="checkbox"
             name="privacy"
             value="1"
-            className="mt-0.5 size-5 shrink-0 accent-night"
+            className="size-6 shrink-0 accent-night"
             aria-invalid={!!errors.privacy}
             aria-describedby={errors.privacy ? 'f-privacy-error' : undefined}
           />
@@ -310,7 +310,7 @@ export default function ContactForm() {
 /* ---------- Hilfskomponenten ---------- */
 
 const inputCls = (invalid: boolean) =>
-  `block w-full border bg-white px-4 py-3.5 text-[1rem] text-ink placeholder:text-stone/70 transition-colors focus:border-ink focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-0 ${
+  `block w-full border bg-white px-4 py-3.5 text-[1rem] text-ink placeholder:text-stone/70 transition-colors focus:border-ink ${
     invalid ? 'border-red-700' : 'border-ink/20 hover:border-ink/45'
   }`;
 

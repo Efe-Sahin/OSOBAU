@@ -138,7 +138,7 @@ export default function Navbar() {
           />
           <a
             href={site.contact.phoneHref}
-            className="hidden items-center gap-2 text-[0.85rem] font-medium opacity-80 transition-opacity hover:opacity-100 xl:inline-flex"
+            className="hidden min-h-6 items-center gap-2 text-[0.85rem] font-medium opacity-80 transition-opacity hover:opacity-100 xl:inline-flex"
           >
             <Phone className="size-4" strokeWidth={1.75} aria-hidden="true" />
             {site.contact.phoneDisplay}

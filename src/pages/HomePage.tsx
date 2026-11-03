@@ -103,7 +103,7 @@ export default function HomePage() {
               </p>
               <a
                 href={site.contact.phoneHref}
-                className="mt-5 inline-flex items-center gap-2 text-[0.95rem] font-medium text-white/85 hover:text-white"
+                className="mt-5 inline-flex min-h-6 items-center gap-2 text-[0.95rem] font-medium text-white/85 hover:text-white"
               >
                 <Phone className="size-4" strokeWidth={1.75} aria-hidden="true" />
                 <span className="link-underline">{site.contact.phoneDisplay}</span>
@@ -361,7 +361,7 @@ export default function HomePage() {
                 <div>
                   <dt className="text-sm text-stone">{h.phone}</dt>
                   <dd className="mt-1 text-lg font-medium">
-                    <a href={site.contact.phoneHref} className="link-underline">
+                    <a href={site.contact.phoneHref} className="link-underline inline-flex min-h-6 items-center">
                       {site.contact.phoneDisplay}
                     </a>
                   </dd>
@@ -369,7 +369,7 @@ export default function HomePage() {
                 <div>
                   <dt className="text-sm text-stone">{h.email}</dt>
                   <dd className="mt-1 text-lg font-medium break-all">
-                    <a href={`mailto:${site.contact.email}`} className="link-underline">
+                    <a href={`mailto:${site.contact.email}`} className="link-underline inline-flex min-h-6 items-center">
                       {site.contact.email}
                     </a>
                   </dd>

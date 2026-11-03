@@ -43,7 +43,7 @@ export default function FaqSection() {
                   {f.link && (
                     <Link
                       to={lp(f.link.to, lang)}
-                      className="mt-3 inline-flex items-center gap-1.5 text-[0.92rem] font-semibold text-ink hover:text-bronze-ink"
+                      className="mt-3 inline-flex min-h-6 items-center gap-1.5 text-[0.92rem] font-semibold text-ink hover:text-bronze-ink"
                     >
                       {f.link.label}
                       <ArrowUpRight className="size-4" strokeWidth={1.75} aria-hidden="true" />

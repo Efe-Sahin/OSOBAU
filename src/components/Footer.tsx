@@ -25,7 +25,7 @@ export default function Footer() {
             <p className="mt-8 max-w-sm text-[0.95rem] leading-relaxed text-white/60">{t.footer.about}</p>
             <Link
               to={lp('/#kontakt', lang)}
-              className="group mt-8 inline-flex items-center gap-2 text-[0.9rem] font-semibold text-bronze"
+              className="group mt-8 inline-flex min-h-6 items-center gap-2 text-[0.9rem] font-semibold text-bronze"
             >
               <span className="link-underline">{t.footer.request}</span>
               <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -64,13 +64,13 @@ export default function Footer() {
 
           <FooterCol title={t.footer.contact} className="col-span-2 lg:col-span-2">
             <li>
-              <a href={site.contact.phoneHref} className="flex items-start gap-3 text-white/70 hover:text-white">
+              <a href={site.contact.phoneHref} className="flex min-h-6 items-start gap-3 py-0.5 text-white/70 hover:text-white">
                 <Phone className="mt-1 size-4 shrink-0 text-bronze" strokeWidth={1.75} aria-hidden="true" />
                 {site.contact.phoneDisplay}
               </a>
             </li>
             <li>
-              <a href={`mailto:${site.contact.email}`} className="flex items-start gap-3 break-all text-white/70 hover:text-white">
+              <a href={`mailto:${site.contact.email}`} className="flex min-h-6 items-start gap-3 py-0.5 break-all text-white/70 hover:text-white">
                 <Mail className="mt-1 size-4 shrink-0 text-bronze" strokeWidth={1.75} aria-hidden="true" />
                 {site.contact.email}
               </a>
