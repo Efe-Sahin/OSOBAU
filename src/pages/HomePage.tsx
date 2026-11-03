@@ -154,33 +154,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- Über uns: hellblaue Fläche mit Leitsatz, Geschichte und Werten ---------- */}
-      <section id="ueber-uns" aria-labelledby="about-title" className="bg-bronze text-[#071a33]">
-        <div className="container-x py-20 lg:py-28">
-          <Reveal className="max-w-4xl">
-            <p className="font-mono text-[0.75rem] tracking-[0.12em] text-[#071a33]/75 uppercase">{h.aboutEyebrow}</p>
+      {/* ---------- Über uns (Variante C, ohne Kennzahlen-Box): dunkle Fläche, Text, Werte-Raster ---------- */}
+      <section id="ueber-uns" aria-labelledby="about-title" className="section on-dark bg-[#071a33] text-white">
+        <div className="container-x">
+          <Reveal className="max-w-[56rem]">
+            <p className="font-mono text-[0.75rem] tracking-[0.14em] text-bronze uppercase">{h.aboutTitle}</p>
             <h2
               id="about-title"
-              className="mt-4 font-display text-[clamp(2.2rem,6vw,5rem)] leading-[1.04] font-extrabold tracking-[0.005em] uppercase"
+              className="mt-4 font-display text-[clamp(2.2rem,4.6vw,3.9rem)] leading-[1.05] font-bold tracking-[-0.025em]"
             >
-              {h.aboutWho[0]}{' '}
-              <span className="box-decoration-clone bg-[#071a33] px-[0.16em] text-white">{h.aboutWho[1]}</span>
-              <span className="text-white" aria-hidden="true">.</span>
+              {h.aboutHead[0]} <span className="text-bronze">{h.aboutHead[1]}</span>
             </h2>
-            <h3 className="mt-12 font-display text-[clamp(1.45rem,2.8vw,2.2rem)] leading-[1.1] font-bold tracking-[0.01em] uppercase">
-              {h.bandTitle[0]} <br className="hidden sm:block" />
-              {h.bandTitle[1]}
-            </h3>
-            <p className="mt-8 font-display text-[1.05rem] font-bold">{h.bandSub}</p>
-            <div className="mt-4 grid gap-4 leading-relaxed text-[#071a33]/90">
-              {h.story.map((para) => (
-                <p key={para.slice(0, 24)}>{para}</p>
-              ))}
-            </div>
-            <div className="mt-10">
+            <p className="mt-8 text-[clamp(1.12rem,1.6vw,1.3rem)] leading-relaxed text-white">{h.aboutLead}</p>
+            {h.aboutParas.map((para) => (
+              <p key={para.slice(0, 24)} className="mt-5 leading-[1.75] text-white/80">
+                {para}
+              </p>
+            ))}
+            <div className="mt-9">
               <Link
                 to={lp('/#projekte', lang)}
-                className="group inline-flex items-center gap-3 bg-[#071a33] px-6 py-3.5 text-[0.78rem] font-semibold tracking-[0.12em] text-white uppercase transition-colors hover:bg-night-2"
+                className="group inline-flex items-center gap-2.5 bg-bronze px-[1.375rem] py-3.5 text-[0.78rem] font-semibold tracking-[0.12em] text-[#071a33] uppercase transition-colors hover:bg-white"
               >
                 {h.bandButton}
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2} aria-hidden="true" />
@@ -189,24 +183,18 @@ export default function HomePage() {
           </Reveal>
 
           {/* Wofür wir stehen – Erfahrung, Qualität, Trockenbau & Kernsanierung */}
-          <div className="mt-20 lg:mt-28">
-            <Reveal>
-              <h3 className="font-display text-[clamp(1.45rem,2.8vw,2.2rem)] leading-[1.1] font-bold tracking-[0.01em] uppercase">
-                {h.valuesTitle}
-              </h3>
-            </Reveal>
-            <ul className="mt-8 grid gap-5 md:grid-cols-3 lg:mt-10 lg:gap-6">
-              {h.values.map((v, i) => (
-                <Reveal as="li" key={v.title} delay={i * 0.08} className="min-w-0 bg-white p-7 text-ink lg:p-9">
-                  <span className="font-mono text-[0.8rem] tracking-[0.06em] text-bronze-ink" aria-hidden="true">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h4 className="mt-4 font-display text-xl font-semibold tracking-[-0.01em]">{v.title}</h4>
-                  <p className="mt-3 leading-relaxed text-stone">{v.text}</p>
-                </Reveal>
-              ))}
-            </ul>
-          </div>
+          <h3 className="sr-only">{h.valuesTitle}</h3>
+          <ul className="mt-16 grid gap-px border border-line-dark bg-line-dark md:grid-cols-3 lg:mt-20">
+            {h.values.map((v, i) => (
+              <Reveal as="li" key={v.title} delay={i * 0.08} className="min-w-0 bg-[#071a33] p-7 lg:p-8">
+                <span className="font-mono text-[0.8rem] tracking-[0.06em] text-bronze" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h4 className="mt-3.5 font-display text-xl font-semibold tracking-[-0.01em]">{v.title}</h4>
+                <p className="mt-2.5 leading-[1.75] text-white/80">{v.text}</p>
+              </Reveal>
+            ))}
+          </ul>
         </div>
       </section>
 
