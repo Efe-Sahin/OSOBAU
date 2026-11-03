@@ -161,6 +161,7 @@ const de = {
     projects: 'Projekte',
     contact: 'Kontakt',
     rights: 'Alle Rechte vorbehalten.',
+    credit: 'Website von Nexframe Studio',
     about:
       'OSOBAU steht für fachgerechte Ausführung von Trockenbau-, Sanierungs- und Innenausbauarbeiten – mit Fokus auf präzise Verarbeitung, funktionale Lösungen und professionelle Projektumsetzung.',
     imprint: 'Impressum',
@@ -389,6 +390,7 @@ const en: UiStrings = {
     projects: 'Projects',
     contact: 'Contact',
     rights: 'All rights reserved.',
+    credit: 'Website by Nexframe Studio',
     about:
       'OSOBAU stands for professional drywall, refurbishment and interior fit-out work – with a focus on precise workmanship, functional solutions and professional project delivery.',
     imprint: 'Legal notice (German)',

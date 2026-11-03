@@ -93,6 +93,8 @@ export default function Footer() {
         <div className="flex flex-col gap-4 pt-8 text-[0.8rem] text-white/65 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {site.name}. {t.footer.rights}
+            <span className="hidden sm:inline" aria-hidden="true"> · </span>
+            <span className="block sm:inline">{t.footer.credit}</span>
           </p>
           <ul className="flex gap-6">
             <li>
