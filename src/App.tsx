@@ -34,9 +34,9 @@ export default function App() {
             <Route path="/projekte" element={<Navigate to="/#projekte" replace />} />
             <Route path="/kontakt" element={<Navigate to="/#kontakt" replace />} />
             {/* Ausnahmen mit eigener Seite */}
-            {/* Alte Adresse der Q3-Referenz (früher „Q3-Verspachtelung“, korrekt: Putzarbeiten) */}
-            <Route path="/projekte/q3-verspachtelung" element={<Navigate to="/projekte/putzarbeiten-q3" replace />} />
-            <Route path="/en/projekte/q3-verspachtelung" element={<Navigate to="/en/projekte/putzarbeiten-q3" replace />} />
+            {/* Alte Adresse der Q3-Referenz (früher „Q3-Verspachtelung“, korrekt: Verputz in Qualitätsstufe Q3) */}
+            <Route path="/projekte/q3-verspachtelung" element={<Navigate to="/projekte/verputz-q3" replace />} />
+            <Route path="/en/projekte/q3-verspachtelung" element={<Navigate to="/en/projekte/verputz-q3" replace />} />
             <Route path="/projekte/:slug" element={<ProjectDetailPage />} />
             {/* Englische Fassung */}
             <Route path="/en" element={<HomePage />} />
