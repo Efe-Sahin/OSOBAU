@@ -11,7 +11,6 @@ import ProjectTile from '../components/ProjectTile';
 import ContactForm from '../components/ContactForm';
 import Placeholder from '../components/Placeholder';
 import HeroMedia from '../components/HeroMedia';
-import ConstructionLines from '../components/ConstructionLines';
 import ServiceCard from '../components/ServiceCard';
 import { getServices } from '../data/services';
 import { getAudiences } from '../data/audiences';
@@ -155,51 +154,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- Über uns ---------- */}
-      {/* ---------- Über uns (Variante A im Rabe-Stil): Leitsatz auf Dunkel + hellblaue Fläche mit Geschichte ---------- */}
-      <section id="ueber-uns" aria-labelledby="about-title">
-        <div className="on-dark relative isolate flex min-h-[360px] items-center overflow-hidden bg-[#071a33] text-white">
-          <ConstructionLines className="absolute inset-0 -z-20 h-full w-full text-bronze" />
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#071a33_0%,rgb(7_26_51/0.45)_55%,rgb(7_26_51/0)_100%)]" aria-hidden="true" />
-          <div className="container-x py-24 lg:py-32">
-            <Reveal>
-              <p className="font-mono text-[0.75rem] tracking-[0.12em] text-bronze uppercase">{h.aboutEyebrow}</p>
-              <h2
-                id="about-title"
-                className="mt-4 font-display text-[clamp(2.2rem,6vw,5rem)] leading-[1.04] font-extrabold tracking-[0.005em] uppercase"
+      {/* ---------- Über uns: hellblaue Fläche mit Leitsatz, Geschichte und Werten ---------- */}
+      <section id="ueber-uns" aria-labelledby="about-title" className="bg-bronze text-[#071a33]">
+        <div className="container-x py-20 lg:py-28">
+          <Reveal className="max-w-4xl">
+            <p className="font-mono text-[0.75rem] tracking-[0.12em] text-[#071a33]/75 uppercase">{h.aboutEyebrow}</p>
+            <h2
+              id="about-title"
+              className="mt-4 font-display text-[clamp(2.2rem,6vw,5rem)] leading-[1.04] font-extrabold tracking-[0.005em] uppercase"
+            >
+              {h.aboutWho[0]}{' '}
+              <span className="box-decoration-clone bg-[#071a33] px-[0.16em] text-white">{h.aboutWho[1]}</span>
+              <span className="text-white" aria-hidden="true">.</span>
+            </h2>
+            <h3 className="mt-12 font-display text-[clamp(1.45rem,2.8vw,2.2rem)] leading-[1.1] font-bold tracking-[0.01em] uppercase">
+              {h.bandTitle[0]} <br className="hidden sm:block" />
+              {h.bandTitle[1]}
+            </h3>
+            <p className="mt-8 font-display text-[1.05rem] font-bold">{h.bandSub}</p>
+            <div className="mt-4 grid gap-4 leading-relaxed text-[#071a33]/90">
+              {h.story.map((para) => (
+                <p key={para.slice(0, 24)}>{para}</p>
+              ))}
+            </div>
+            <div className="mt-10">
+              <Link
+                to={lp('/#projekte', lang)}
+                className="group inline-flex items-center gap-3 bg-[#071a33] px-6 py-3.5 text-[0.78rem] font-semibold tracking-[0.12em] text-white uppercase transition-colors hover:bg-night-2"
               >
-                {h.aboutWho[0]}{' '}
-                <span className="box-decoration-clone bg-bronze px-[0.16em] text-[#071a33]">{h.aboutWho[1]}</span>
-                <span className="text-bronze" aria-hidden="true">.</span>
-              </h2>
-            </Reveal>
-          </div>
-        </div>
+                {h.bandButton}
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2} aria-hidden="true" />
+              </Link>
+            </div>
+          </Reveal>
 
-        <div className="bg-bronze text-[#071a33]">
-          <div className="container-x py-20 lg:py-28">
-            <Reveal className="max-w-4xl">
+          {/* Wofür wir stehen – Erfahrung, Qualität, Trockenbau & Kernsanierung */}
+          <div className="mt-20 lg:mt-28">
+            <Reveal>
               <h3 className="font-display text-[clamp(1.45rem,2.8vw,2.2rem)] leading-[1.1] font-bold tracking-[0.01em] uppercase">
-                {h.bandTitle[0]} <br className="hidden sm:block" />
-                {h.bandTitle[1]}
-                <span className="text-white" aria-hidden="true">.</span>
+                {h.valuesTitle}
               </h3>
-              <p className="mt-8 font-display text-[1.05rem] font-bold">{h.bandSub}</p>
-              <div className="mt-4 grid gap-4 leading-relaxed text-[#071a33]/90">
-                {h.story.map((para) => (
-                  <p key={para.slice(0, 24)}>{para}</p>
-                ))}
-              </div>
-              <div className="mt-10">
-                <Link
-                  to={lp('/#projekte', lang)}
-                  className="group inline-flex items-center gap-3 bg-[#071a33] px-6 py-3.5 text-[0.78rem] font-semibold tracking-[0.12em] text-white uppercase transition-colors hover:bg-night-2"
-                >
-                  {h.bandButton}
-                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2} aria-hidden="true" />
-                </Link>
-              </div>
             </Reveal>
+            <ul className="mt-8 grid gap-5 md:grid-cols-3 lg:mt-10 lg:gap-6">
+              {h.values.map((v, i) => (
+                <Reveal as="li" key={v.title} delay={i * 0.08} className="min-w-0 bg-white p-7 text-ink lg:p-9">
+                  <span className="font-mono text-[0.8rem] tracking-[0.06em] text-bronze-ink" aria-hidden="true">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h4 className="mt-4 font-display text-xl font-semibold tracking-[-0.01em]">{v.title}</h4>
+                  <p className="mt-3 leading-relaxed text-stone">{v.text}</p>
+                </Reveal>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
