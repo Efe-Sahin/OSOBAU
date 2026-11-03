@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
-import { Check, Phone } from 'lucide-react';
+import { ArrowRight, Check, Phone } from 'lucide-react';
 
 import Page from '../components/Page';
 import Seo from '../components/Seo';
@@ -8,7 +8,6 @@ import Button from '../components/Button';
 import Reveal from '../components/Reveal';
 import SectionHeader from '../components/SectionHeader';
 import ProjectTile from '../components/ProjectTile';
-import ResponsiveImage from '../components/ResponsiveImage';
 import ContactForm from '../components/ContactForm';
 import Placeholder from '../components/Placeholder';
 import HeroMedia from '../components/HeroMedia';
@@ -41,8 +40,6 @@ export default function HomePage() {
 
   const heroImage: SiteImage = { key: 'aok-gebaeude-magdeburg-luftbild', alt: h.heroAlt, focus: '50% 45%' };
   const heroCaption = { label: projects[1].title, to: lp(`/projekte/${projects[1].slug}`, lang) };
-  /** Über uns: Besprechungsraum Saarterrassen (Innenausbau) */
-  const aboutImage: SiteImage = { ...projects[0].images[1] };
   /** Alle Referenzen mit ihrem Titelbild (Q3 ist keine Leistung mehr, nur noch Projekt-Referenz) */
   const homeProjects = projects.map((p) => ({ project: p, cover: p.images[0] }));
 
@@ -78,19 +75,22 @@ export default function HomePage() {
         <div className="container-x w-full pt-32 pb-8 lg:pb-10">
           <motion.h1
             id="hero-title"
-            className="font-display text-[clamp(2.75rem,7.6vw,7.75rem)] leading-[0.98] font-semibold tracking-[-0.03em]"
+            className="font-display text-[clamp(2.3rem,6.4vw,6.25rem)] leading-[1.03] font-extrabold tracking-[0.005em] uppercase"
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
           >
-            <span className="block">{h.hero1}</span>{' '}
-            <span className="block text-white/90 lg:pl-[22%]">{h.hero2}</span>
+            {/* Leitsatz im Stil großer Bau-Websites: Großbuchstaben, letzter Satz hellblau hinterlegt */}
+            <span className="block">{h.aboutClaim[0]}</span> <span className="block">{h.aboutClaim[1]}</span>{' '}
+            <span className="block">
+              <span className="box-decoration-clone bg-bronze px-[0.16em] text-[#071a33]">{h.aboutClaim[2]}</span>
+            </span>
           </motion.h1>
 
           <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-12 lg:items-end">
-            {/* Text rechts */}
+            {/* Text links, unter dem Leitsatz */}
             <motion.div
-              className="max-w-lg lg:col-span-5 lg:col-start-8 lg:justify-self-end"
+              className="max-w-xl lg:col-span-6"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
@@ -154,77 +154,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- Über uns ---------- */}
-      {/* Variante B: Projektfoto links, Text rechts (Texte SEO/GEO-optimiert) */}
-      <section id="ueber-uns" aria-labelledby="about-title" className="section bg-white">
+      {/* ---------- Über uns (Variante C, ohne Kennzahlen-Box): dunkle Fläche, Text, Werte-Raster ---------- */}
+      <section id="ueber-uns" aria-labelledby="about-title" className="section on-dark bg-[#071a33] text-white">
         <div className="container-x">
-          <SectionHeader id="about-title" title={h.aboutTitle} accent={h.aboutAccent} />
-
-          {/* Kennzahlen (vom Kunden bestätigt): Gründungsjahr, Teamgröße, Region */}
-          <Reveal>
-            <dl
-              aria-label={h.factsLabel}
-              className="mx-auto mb-14 grid max-w-5xl border-y border-line sm:grid-cols-3 lg:mb-20"
+          <Reveal className="max-w-[56rem]">
+            <p className="font-mono text-[0.75rem] tracking-[0.14em] text-bronze uppercase">{h.aboutTitle}</p>
+            <h2
+              id="about-title"
+              className="mt-4 font-display text-[clamp(2.2rem,4.6vw,3.9rem)] leading-[1.05] font-bold tracking-[-0.025em]"
             >
-              {h.facts.map((f, i) => (
-                <div
-                  key={f.label}
-                  className={`flex flex-col-reverse items-center px-4 py-6 text-center ${i > 0 ? 'border-t border-line sm:border-t-0 sm:border-l' : ''}`}
-                >
-                  <dt className="mt-2 font-mono text-[0.75rem] tracking-[0.08em] text-stone uppercase">{f.label}</dt>
-                  <dd className="font-display text-[clamp(1.5rem,2.6vw,2.1rem)] leading-tight font-semibold tracking-[-0.02em]">
-                    {f.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
-        </div>
-        <div className="container-x grid gap-10 md:grid-cols-2 md:items-stretch md:gap-14 lg:gap-20">
-          {/* Bild passt sich der Höhe des Textblocks an */}
-          <Reveal className="h-full">
-            <div className="relative aspect-[4/3] h-full overflow-hidden md:aspect-auto md:min-h-[420px]">
-              <ResponsiveImage image={aboutImage} fill sizes="(min-width: 768px) 46vw, 100vw" />
+              {h.aboutHead[0]} <span className="text-bronze">{h.aboutHead[1]}</span>
+            </h2>
+            <p className="mt-8 text-[clamp(1.12rem,1.6vw,1.3rem)] leading-relaxed text-white">{h.aboutLead}</p>
+            {h.aboutParas.map((para) => (
+              <p key={para.slice(0, 24)} className="mt-5 leading-[1.75] text-white/80">
+                {para}
+              </p>
+            ))}
+            <div className="mt-9">
+              <Link
+                to={lp('/#projekte', lang)}
+                className="group inline-flex items-center gap-2.5 bg-bronze px-[1.375rem] py-3.5 text-[0.78rem] font-semibold tracking-[0.12em] text-[#071a33] uppercase transition-colors hover:bg-white"
+              >
+                {h.bandButton}
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2} aria-hidden="true" />
+              </Link>
             </div>
           </Reveal>
-          <Reveal delay={0.1} className="flex flex-col justify-center md:py-6">
-            <h3 className="display-md hyphens-manual">{h.aboutHeading}</h3>
-            <p className="mt-6 text-[1.1rem] leading-relaxed text-ink/85">{h.aboutP1}</p>
-            <p className="mt-5 leading-relaxed text-stone">{h.aboutP2}</p>
-          </Reveal>
-        </div>
 
-        {/* Unsere Geschichte – Text vom Kunden, als Team ohne Namen */}
-        <div className="container-x mt-16 lg:mt-24">
-          <Reveal>
-            <figure className="on-dark mx-auto max-w-4xl bg-night p-8 text-white sm:p-12 lg:p-16">
-              <h3 className="display-md">{h.storyTitle}</h3>
-              <div className="mt-8 grid gap-5 text-[1.05rem] leading-relaxed text-white/85 lg:text-[1.1rem]">
-                {h.story.map((para) => (
-                  <p key={para.slice(0, 24)}>{para}</p>
-                ))}
-              </div>
-              <figcaption className="mt-10 flex items-center gap-4 border-t border-line-dark pt-6 font-display text-lg font-semibold">
-                <span className="h-px w-8 bg-bronze" aria-hidden="true" />
-                {h.storySign}
-              </figcaption>
-            </figure>
-          </Reveal>
-        </div>
-
-        {/* Wofür wir stehen – Unterscheidungsmerkmale laut Briefing: Erfahrung, Qualität, Spezialisierung */}
-        <div className="container-x mt-16 lg:mt-24">
-          <Reveal>
-            <h3 className="display-md text-center">{h.valuesTitle}</h3>
-          </Reveal>
-          <ul className="mt-10 grid gap-5 md:grid-cols-3 lg:mt-12 lg:gap-6">
+          {/* Wofür wir stehen – Erfahrung, Qualität, Trockenbau & Kernsanierung */}
+          <h3 className="sr-only">{h.valuesTitle}</h3>
+          <ul className="mt-16 grid gap-px border border-line-dark bg-line-dark md:grid-cols-3 lg:mt-20">
             {h.values.map((v, i) => (
-              <Reveal as="li" key={v.title} delay={i * 0.08} className="min-w-0 border border-line bg-paper p-7 lg:p-9">
-                <span className="font-mono text-[0.8rem] tracking-[0.06em] text-bronze-ink" aria-hidden="true">
+              <Reveal as="li" key={v.title} delay={i * 0.08} className="min-w-0 bg-[#071a33] p-7 lg:p-8">
+                <span className="font-mono text-[0.8rem] tracking-[0.06em] text-bronze" aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h4 className="mt-4 font-display text-xl font-semibold tracking-[-0.01em]">{v.title}</h4>
-                <p className="mt-3 leading-relaxed text-stone">{v.text}</p>
+                <h4 className="mt-3.5 font-display text-xl font-semibold tracking-[-0.01em]">{v.title}</h4>
+                <p className="mt-2.5 leading-[1.75] text-white/80">{v.text}</p>
               </Reveal>
             ))}
           </ul>

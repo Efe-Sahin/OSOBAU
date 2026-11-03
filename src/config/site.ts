@@ -25,9 +25,9 @@ export const site = {
     legalForm: todo('Rechtsform (z. B. Einzelunternehmen)') as MaybeMissing,
     owner: 'Luna Müller',
     ownerRole: 'Inhaberin',
-    /** Briefing: „Französische str. 10117 Berlin“ – Hausnummer fehlt. */
+    /** Briefing: „Französische str. 10117 Berlin“, Hausnummer vom Kunden nachgereicht. */
     street: 'Französische Straße',
-    houseNumber: todo('Hausnummer') as MaybeMissing,
+    houseNumber: '20' as MaybeMissing,
     zip: '10117',
     city: 'Berlin',
     country: 'Deutschland',
