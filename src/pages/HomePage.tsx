@@ -88,9 +88,9 @@ export default function HomePage() {
           </motion.h1>
 
           <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-12 lg:items-end">
-            {/* Text rechts */}
+            {/* Text links, unter dem Leitsatz */}
             <motion.div
-              className="max-w-lg lg:col-span-5 lg:col-start-8 lg:justify-self-end"
+              className="max-w-xl lg:col-span-6"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
