@@ -79,8 +79,8 @@ const de = {
         text: 'Saubere Anschlüsse, gerade Flächen und eine präzise Verarbeitung bis zur fertigen Oberfläche.',
       },
       {
-        title: 'Spezialisierung',
-        text: 'Statt alles anzubieten, konzentrieren wir uns auf den Innenausbau: Trockenbau, Kernsanierung und Brandschutzarbeiten.',
+        title: 'Trockenbau & Kernsanierung',
+        text: 'Unser Schwerpunkt: Trockenbau für Neubau, Ausbau und Modernisierung sowie die Kernsanierung bestehender Gebäude – von der Raumaufteilung bis zur fertigen Oberfläche.',
       },
     ],
     projectsTitle: 'Projekte',
@@ -302,8 +302,8 @@ const en: UiStrings = {
         text: 'Clean joints, straight surfaces and precise workmanship, right down to the finished surface.',
       },
       {
-        title: 'Specialisation',
-        text: 'Instead of offering everything, we focus on interior fit-out: drywall, full refurbishment and fire protection work.',
+        title: 'Drywall & full refurbishment',
+        text: 'Our core: drywall for new builds, fit-outs and modernisation, and the full refurbishment of existing buildings – from the room layout to the finished surface.',
       },
     ],
     projectsTitle: 'Projects',
