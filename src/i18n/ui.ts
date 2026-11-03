@@ -59,11 +59,6 @@ const de = {
     aboutEyebrow: 'Über uns · seit 2022 · 13 Mitarbeitende',
     aboutWho: ['Wer wir', 'sind'],
     aboutHead: ['Etwas Eigenes aufbauen.', 'Bleibendes schaffen.'],
-    aboutLead: 'OSOBAU wurde 2022 gegründet – heute sind wir ein Team aus 13 Mitarbeitenden für Trockenbau und Innenausbau.',
-    aboutParas: [
-      'Für uns bedeutet Bauen mehr als die Umsetzung eines Auftrags: Hinter jedem Projekt stehen Menschen, ihre Ideen und das Vertrauen, das sie uns entgegenbringen. Uns ist wichtig, füreinander einzustehen, mit anzupacken und auch bei Herausforderungen gemeinsam Lösungen zu finden.',
-      'Sorgfalt, ehrliche Kommunikation und verlässliche Absprachen sind unser Anspruch – von der ersten Absprache bis zur Fertigstellung.',
-    ],
     bandTitle: ['Etwas Eigenes aufbauen,', 'Bleibendes schaffen'],
     bandSub: 'OSOBAU – Trockenbau und Innenausbau aus Berlin, seit 2022',
     bandButton: 'Unsere Projekte',
@@ -289,11 +284,6 @@ const en: UiStrings = {
     aboutEyebrow: 'About us · since 2022 · 13 employees',
     aboutWho: ['Who we', 'are'],
     aboutHead: ['Building something of our own.', 'Creating something lasting.'],
-    aboutLead: 'OSOBAU was founded in 2022 – today we are a team of 13 employees for drywall and interior fit-out.',
-    aboutParas: [
-      'For us, building means more than carrying out a contract: behind every project are people, their ideas and the trust they place in us. It matters to us to stand up for one another, to roll up our sleeves and to find solutions together, even when things get challenging.',
-      'Care, honest communication and reliable agreements are our standard – from the first conversation to completion.',
-    ],
     bandTitle: ['Building something of our own,', 'creating something lasting'],
     bandSub: 'OSOBAU – drywall and interior fit-out from Berlin, since 2022',
     bandButton: 'Our projects',

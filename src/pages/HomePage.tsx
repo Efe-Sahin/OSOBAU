@@ -159,9 +159,16 @@ export default function HomePage() {
         <div className="container-x">
           <SectionHeader dark id="about-title" title={h.aboutTitle} accent={`${h.aboutHead[0]} ${h.aboutHead[1]}`} />
           <Reveal className="max-w-[56rem]">
-            <p className="text-[clamp(1.12rem,1.6vw,1.3rem)] leading-relaxed text-white">{h.aboutLead}</p>
-            {h.aboutParas.map((para) => (
-              <p key={para.slice(0, 24)} className="mt-5 leading-[1.75] text-white/80">
+            {/* Text vom Kunden, vollständig und unverändert */}
+            {h.story.map((para, i) => (
+              <p
+                key={para.slice(0, 24)}
+                className={
+                  i === 0
+                    ? 'text-[clamp(1.08rem,1.5vw,1.22rem)] leading-relaxed text-white'
+                    : 'mt-5 leading-[1.75] text-white/80'
+                }
+              >
                 {para}
               </p>
             ))}
