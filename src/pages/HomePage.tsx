@@ -157,10 +157,11 @@ export default function HomePage() {
       {/* ---------- Über uns (Variante C, zentriert wie die anderen Abschnitte): Kopf, Text, Werte-Raster ---------- */}
       <section id="ueber-uns" aria-labelledby="about-title" className="section on-dark bg-[#071a33] text-white">
         <div className="container-x">
-          <SectionHeader dark id="about-title" title={h.aboutHead[0]} accent={h.aboutHead[1]} intro={h.aboutLead} />
-          <Reveal className="mx-auto -mt-4 max-w-3xl text-center lg:-mt-6">
-            {h.aboutParas.map((para, i) => (
-              <p key={para.slice(0, 24)} className={`${i > 0 ? 'mt-5' : ''} leading-[1.75] text-white/80`}>
+          <SectionHeader dark id="about-title" title={h.aboutTitle} accent={`${h.aboutHead[0]} ${h.aboutHead[1]}`} />
+          <Reveal className="max-w-[56rem]">
+            <p className="text-[clamp(1.12rem,1.6vw,1.3rem)] leading-relaxed text-white">{h.aboutLead}</p>
+            {h.aboutParas.map((para) => (
+              <p key={para.slice(0, 24)} className="mt-5 leading-[1.75] text-white/80">
                 {para}
               </p>
             ))}
