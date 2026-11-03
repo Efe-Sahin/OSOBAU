@@ -89,8 +89,8 @@ export const services: Service[] = [
       'Brandschutzrelevante Ausbauarbeiten im Rahmen des Innenausbaus',
     ],
     image: {
-      key: 'saarterrassen-plaza-nord-01',
-      alt: 'Besprechungsraum mit Deckenfläche und Lichtleiste – AOK-Gebäude Magdeburg',
+      key: 'saarterrassen-plaza-nord-03',
+      alt: 'Fassade des Gebäudes Saarterrassen Plaza Nord in Saarbrücken – Referenz für Trockenbau- und Brandschutzarbeiten',
     },
     seo: {
       title: 'Brandschutzarbeiten im Trockenbau | OSOBAU',
@@ -115,7 +115,7 @@ const servicesEnOverrides: Partial<Record<ServiceSlug, { title: string; short: s
   brandschutzarbeiten: {
     title: 'Fire protection work',
     short: 'Professional drywall and fit-out work in line with project-specific fire protection requirements.',
-    alt: 'Meeting room with ceiling and light strip – AOK building Magdeburg',
+    alt: 'Façade of the Saarterrassen Plaza Nord building in Saarbrücken – reference for drywall and fire protection work',
   },
 };
 
