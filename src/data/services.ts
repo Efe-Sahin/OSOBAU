@@ -41,7 +41,7 @@ export const services: Service[] = [
     ],
     image: {
       key: 'saarterrassen-plaza-nord-02',
-      alt: 'Bürofläche mit Akustikdecke und farbigen Wandflächen – Referenz Saarterrassen Plaza Nord',
+      alt: 'Bürofläche mit Akustikdecke und farbigen Wandflächen – Referenz AOK-Gebäude Magdeburg',
     },
     highlight: true,
     seo: {
@@ -90,7 +90,7 @@ export const services: Service[] = [
     ],
     image: {
       key: 'saarterrassen-plaza-nord-01',
-      alt: 'Besprechungsraum mit Deckenfläche und Lichtleiste – Referenz Saarterrassen Plaza Nord',
+      alt: 'Besprechungsraum mit Deckenfläche und Lichtleiste – AOK-Gebäude Magdeburg',
     },
     seo: {
       title: 'Brandschutzarbeiten im Trockenbau | OSOBAU',
@@ -105,7 +105,7 @@ const servicesEnOverrides: Partial<Record<ServiceSlug, { title: string; short: s
   trockenbau: {
     title: 'Drywall',
     short: 'Flexible room solutions and professional drywall work for new builds, fit-outs and modernisation.',
-    alt: 'Office space with acoustic ceiling and coloured walls – Saarterrassen Plaza Nord reference',
+    alt: 'Office space with acoustic ceiling and coloured walls – AOK building Magdeburg reference',
   },
   kernsanierung: {
     title: 'Full refurbishment',
@@ -115,7 +115,7 @@ const servicesEnOverrides: Partial<Record<ServiceSlug, { title: string; short: s
   brandschutzarbeiten: {
     title: 'Fire protection work',
     short: 'Professional drywall and fit-out work in line with project-specific fire protection requirements.',
-    alt: 'Meeting room with ceiling and light strip – Saarterrassen Plaza Nord reference',
+    alt: 'Meeting room with ceiling and light strip – AOK building Magdeburg',
   },
 };
 

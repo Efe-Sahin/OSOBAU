@@ -50,14 +50,6 @@ export const projects: Project[] = [
         alt: 'Fassade des Gebäudes Saarterrassen Plaza Nord in Saarbrücken bei blauem Himmel',
       },
       {
-        key: 'saarterrassen-plaza-nord-01',
-        alt: 'Besprechungsraum mit dunkler Deckenfläche, Einbauleuchten und linearer Lichtleiste – Saarterrassen Plaza Nord',
-      },
-      {
-        key: 'saarterrassen-plaza-nord-02',
-        alt: 'Offene Bürofläche mit Akustikdecke, farbigen Wandflächen und Stütze – Saarterrassen Plaza Nord',
-      },
-      {
         key: 'saarterrassen-plaza-nord-04',
         alt: 'Gebäudeecke mit Fassadenöffnung im obersten Geschoss – Saarterrassen Plaza Nord, Saarbrücken',
         focus: '50% 40%',
@@ -84,6 +76,15 @@ export const projects: Project[] = [
       {
         key: 'aok-gebaeude-magdeburg',
         alt: 'Luftaufnahme des AOK-Gebäudes in Magdeburg mit begrüntem Innenhof',
+      },
+      {
+        /* Dateiname historisch „saarterrassen-…“ – Bild gehört laut OSOBAU zum AOK-Gebäude Magdeburg */
+        key: 'saarterrassen-plaza-nord-01',
+        alt: 'Besprechungsraum mit dunkler Deckenfläche, Einbauleuchten und linearer Lichtleiste – AOK-Gebäude Magdeburg',
+      },
+      {
+        key: 'saarterrassen-plaza-nord-02',
+        alt: 'Offene Bürofläche mit Akustikdecke, farbigen Wandflächen und Stütze – AOK-Gebäude Magdeburg',
       },
     ],
     seo: {
@@ -159,8 +160,6 @@ const projectsEnOverrides: Record<
       'Professional drywall and fire protection work as part of the structural fit-out at the Saarterrassen Plaza Nord site in Saarbrücken.',
     alts: [
       'Façade of the Saarterrassen Plaza Nord building in Saarbrücken under a blue sky',
-      'Meeting room with dark ceiling, recessed lights and linear light strip – Saarterrassen Plaza Nord',
-      'Open-plan office with acoustic ceiling, coloured walls and column – Saarterrassen Plaza Nord',
       'Corner of the building with façade opening on the top floor – Saarterrassen Plaza Nord, Saarbrücken',
     ],
     seo: {
@@ -175,7 +174,11 @@ const projectsEnOverrides: Record<
     servicesLabel: 'Drywall work',
     description:
       'Professional drywall work in the AOK building in Magdeburg as part of structural fit-out and modernisation measures.',
-    alts: ['Aerial view of the AOK building in Magdeburg with green courtyard'],
+    alts: [
+      'Aerial view of the AOK building in Magdeburg with green courtyard',
+      'Meeting room with dark ceiling, recessed lights and linear light strip – AOK building Magdeburg',
+      'Open-plan office with acoustic ceiling, coloured walls and column – AOK building Magdeburg',
+    ],
     seo: {
       title: 'AOK Building Magdeburg – Drywall Work | OSOBAU',
       description:
