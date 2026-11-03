@@ -39,7 +39,6 @@ export default function HomePage() {
   const steps = h.steps;
 
   const heroImage: SiteImage = { key: 'aok-gebaeude-magdeburg-luftbild', alt: h.heroAlt, focus: '50% 45%' };
-  const heroCaption = { label: projects[1].title, to: lp(`/projekte/${projects[1].slug}`, lang) };
   /** Alle Referenzen mit ihrem Titelbild (Q3 ist keine Leistung mehr, nur noch Projekt-Referenz) */
   const homeProjects = projects.map((p) => ({ project: p, cover: p.images[0] }));
 
@@ -72,7 +71,7 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="container-x w-full pt-32 pb-8 lg:pb-10">
+        <div className="container-x w-full pt-32 pb-16 lg:pb-24">
           <motion.h1
             id="hero-title"
             className="font-display text-[clamp(2.3rem,6.4vw,6.25rem)] leading-[1.03] font-extrabold tracking-[0.005em] uppercase"
@@ -111,25 +110,6 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          <motion.div
-            className="mt-12 grid gap-3 border-t border-white/25 pt-5 sm:grid-cols-3 lg:mt-16"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            <span className="font-mono text-[0.78rem] tracking-[0.06em] text-white/80 uppercase">
-              {h.reference} ·{' '}
-              <Link to={heroCaption.to} className="link-underline inline-block py-1 text-white">
-                {heroCaption.label}
-              </Link>
-            </span>
-            <span className="font-mono text-[0.78rem] tracking-[0.06em] text-white/80 uppercase sm:text-center">
-              {h.focus} · <span className="text-white">{site.serviceArea.join(' & ')}</span>
-            </span>
-            <span className="font-mono text-[0.78rem] tracking-[0.06em] text-white/80 uppercase sm:text-right">
-              {h.references} · <span className="text-white">{site.referenceLocations.join(', ')}</span>
-            </span>
-          </motion.div>
         </div>
       </section>
 
